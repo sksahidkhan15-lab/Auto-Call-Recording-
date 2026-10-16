@@ -33,6 +33,7 @@
       btn_quick_record: "Record Voice Memo",
       btn_import_audio: "Import Audio File",
       btn_view_library: "View All Recordings",
+      btn_install_pwa: "Install App",
       recent_title: "Recent Recordings",
       empty_recordings_msg: "No recordings in library. Record a call memo or import an audio file to get started.",
       search_placeholder: "Search by contact, phone number, note...",
@@ -137,6 +138,7 @@
       btn_quick_record: "ভয়েস মেমো রেকর্ড করুন",
       btn_import_audio: "অডিও ফাইল ইমপোর্ট করুন",
       btn_view_library: "সমস্ত রেকর্ডিং দেখুন",
+      btn_install_pwa: "অ্যাপ ইনস্টল করুন",
       recent_title: "সাম্প্রতিক রেকর্ডিং",
       empty_recordings_msg: "লাইব্রেরিতে কোনো রেকর্ডিং নেই। শুরু করতে একটি ভয়েস মেমো রেকর্ড করুন বা ফাইল ইমপোর্ট করুন।",
       search_placeholder: "নাম, ফোন নম্বর বা নোট দিয়ে খুঁজুন...",
@@ -1117,6 +1119,56 @@
     applyLanguage(currentLang);
     checkAndroidBridge();
   }
+
+  // --- PWA Service Worker Registration & Install Prompt ---
+  let deferredPrompt = null;
+  const pwaInstallBtn = document.getElementById('pwaInstallBtn');
+
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('./service-worker.js', { scope: './' })
+        .then((reg) => {
+          console.log('PWA Service Worker registered with scope:', reg.scope);
+        })
+        .catch((err) => {
+          console.error('PWA Service Worker registration error:', err);
+        });
+    });
+  }
+
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+    if (pwaInstallBtn) {
+      pwaInstallBtn.style.display = 'inline-flex';
+    }
+  });
+
+  if (pwaInstallBtn) {
+    pwaInstallBtn.addEventListener('click', async () => {
+      if (deferredPrompt) {
+        deferredPrompt.prompt();
+        const choice = await deferredPrompt.userChoice;
+        if (choice.outcome === 'accepted') {
+          pwaInstallBtn.style.display = 'none';
+        }
+        deferredPrompt = null;
+      } else {
+        const msg = currentLang === 'bn'
+          ? 'অ্যাপটি ইনস্টল করতে ব্রাউজারের থ্রি-ডট (⋮) মেনু থেকে "Install app" অথবা "Add to Home screen" চাপুন।'
+          : 'To install, tap the three dots (⋮) menu in Chrome and select "Install app" or "Add to Home screen".';
+        alert(msg);
+      }
+    });
+  }
+
+  window.addEventListener('appinstalled', () => {
+    console.log('Auto Call Recorder PWA installed successfully.');
+    if (pwaInstallBtn) {
+      pwaInstallBtn.style.display = 'none';
+    }
+    deferredPrompt = null;
+  });
 
   init();
 })();

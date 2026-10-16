@@ -53,29 +53,31 @@ A professional, privacy-first **Auto Call Recorder** project featuring:
 
 ---
 
-## 🌐 Deploy Web Companion to GitHub Pages (Free)
+## 🌐 Progressive Web App (PWA) & GitHub Pages Deployment
 
-1. Create a public repository on GitHub named:
-   ```
-   auto-call-recorder
-   ```
-2. Push your project files:
-   ```bash
-   git init
-   git add index.html style.css app.js README.md
-   git commit -m "Deploy Auto Call Recorder Web Companion"
-   git branch -M main
-   git remote add origin https://github.com/<your-username>/auto-call-recorder.git
-   git push -u origin main
-   ```
-3. In your GitHub repository:
-   - Navigate to **Settings** > **Pages** (in the left sidebar).
-   - Under **Build and deployment** > **Source**, choose **Deploy from a branch**.
-   - Select **Branch**: `main` / `/(root)` and click **Save**.
-4. In ~1 minute, your website will be live at:
-   ```
-   https://<your-username>.github.io/auto-call-recorder/
-   ```
+The web companion is a **Progressive Web App (PWA)** that can be installed directly onto your Android phone's home screen via Google Chrome.
+
+### Required Files for GitHub Pages:
+- `index.html` (with PWA `<link rel="manifest">`, viewport, theme-color metadata)
+- `style.css` (dark UI styling and install button)
+- `app.js` (IndexedDB logic, player, recorder, and Service Worker registration)
+- `manifest.json` (PWA application metadata and icon definitions)
+- `service-worker.js` (offline caching engine)
+- `icons/icon-192.png` (192x192 PNG launcher icon)
+- `icons/icon-512.png` (512x512 PNG high-res icon)
+- `icons/icon-maskable-192.png` (192x192 maskable icon)
+- `icons/icon-maskable-512.png` (512x512 maskable icon)
+
+### How to Upload/Update on GitHub Using an Android Phone:
+1. Open **Chrome** on your Android phone and visit your repository:
+   `https://github.com/sksahidkhan15-lab/Auto-Call-Recording-`
+2. Make sure you are signed in to your GitHub account.
+3. Tap **Add file** > **Upload files**.
+4. Tap **choose your files** and select `manifest.json`, `service-worker.js`, `index.html`, `style.css`, and `app.js`.
+5. To upload the `icons` folder, upload the `.png` icons into an `icons/` folder or drag them.
+6. Scroll down and tap **Commit changes**.
+7. In ~60 seconds, open `https://sksahidkhan15-lab.github.io/Auto-Call-Recording-/`.
+8. Tap the **Install** button on the app header, or tap Chrome's three dots (`⋮`) > **Install app** (or **Add to Home screen**).
 
 ---
 

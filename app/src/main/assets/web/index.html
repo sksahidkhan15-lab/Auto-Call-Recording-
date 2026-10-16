@@ -2,9 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Auto Call Recorder &amp; Offline Library</title>
   <meta name="description" content="Privacy-first Auto Call Recorder web companion with offline playback, audio player, IndexedDB storage, and metadata management.">
+  <link rel="manifest" href="./manifest.json">
+  <meta name="theme-color" content="#080B0A">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Call Recorder">
+  <link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png">
+  <link rel="apple-touch-icon" href="./icons/icon-192.png">
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,6 +35,10 @@
       </div>
     </div>
     <div class="header-right">
+      <button id="pwaInstallBtn" class="pwa-install-btn" style="display:none;" aria-label="Install Application">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+        <span data-i18n="btn_install_pwa">Install</span>
+      </button>
       <select id="languageSelect" class="lang-select" aria-label="Select Language">
         <option value="en">English</option>
         <option value="bn">বাংলা</option>
@@ -62,6 +74,7 @@
   <main class="main-container">
     <!-- DASHBOARD VIEW -->
     <section id="view-dashboard" class="tab-view active">
+      <!-- Status Banner -->
       <div class="status-card" id="statusCard">
         <div class="status-icon-wrap ready" id="statusIcon">
           <div class="pulse-ring"></div>
@@ -76,6 +89,7 @@
         </div>
       </div>
 
+      <!-- Quick Metrics Grid -->
       <div class="stats-grid">
         <div class="stat-card">
           <div class="stat-label" data-i18n="stat_total">Total Recordings</div>
@@ -99,6 +113,7 @@
         </div>
       </div>
 
+      <!-- Quick Actions -->
       <div class="quick-actions-bar">
         <button class="btn btn-primary" id="btnQuickRecord" data-i18n="btn_quick_record">
           <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><circle cx="12" cy="12" r="6"></circle></svg>
@@ -114,6 +129,7 @@
         </button>
       </div>
 
+      <!-- Recent Recordings Card -->
       <div class="card recent-card">
         <div class="card-header">
           <h3 data-i18n="recent_title">Recent Recordings</h3>
@@ -160,7 +176,9 @@
         </div>
       </div>
 
-      <div class="recordings-list" id="recordingsList"></div>
+      <div class="recordings-list" id="recordingsList">
+        <!-- Rendered via JS -->
+      </div>
     </section>
 
     <!-- RECORDER / IMPORT VIEW -->
@@ -169,11 +187,13 @@
         <h2 data-i18n="recorder_tool_title">Voice &amp; Call Memo Recorder</h2>
         <p class="text-muted" data-i18n="recorder_tool_desc">Record a voice memo, conversation note, or microphone audio directly into your offline library using the browser Web Audio API.</p>
 
+        <!-- Live Visualizer Canvas -->
         <div class="visualizer-container">
           <canvas id="visualizerCanvas" width="600" height="120"></canvas>
           <div class="record-time-display" id="recordTimer">00:00.0</div>
         </div>
 
+        <!-- Recording Details Form -->
         <div class="form-row">
           <div class="form-group">
             <label for="recordContactName" data-i18n="label_contact_name">Contact / Title</label>
@@ -203,6 +223,7 @@
         </div>
       </div>
 
+      <!-- File Import Section -->
       <div class="card import-card">
         <h3 data-i18n="import_section_title">Import External Audio / System Call Recording</h3>
         <p class="text-muted" data-i18n="import_section_desc">Have recordings from Samsung, Xiaomi, or a third-party dialer? Import them into your offline IndexedDB library for instant playback, search, and categorization.</p>
@@ -216,7 +237,7 @@
       </div>
     </section>
 
-    <!-- COMPATIBILITY VIEW -->
+    <!-- COMPATIBILITY / DIAGNOSTICS VIEW -->
     <section id="view-diagnostics" class="tab-view">
       <div class="card">
         <h2 data-i18n="compat_title">Android &amp; Browser Compatibility Engine</h2>
@@ -369,7 +390,9 @@
     </div>
   </div>
 
+  <!-- Native Audio Element -->
   <audio id="nativeAudio"></audio>
+
   <script src="app.js"></script>
 </body>
 </html>
