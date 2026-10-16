@@ -1,0 +1,109 @@
+<resources>
+    <string name="app_name">অটো কল রেকর্ডার</string>
+    <string name="nav_dashboard">ড্যাশবোর্ড</string>
+    <string name="nav_recordings">রেকর্ডিংস</string>
+    <string name="nav_diagnostics">ডায়াগনস্টিকস</string>
+    <string name="nav_web_sync">ওয়েব ও ব্যাকআপ</string>
+    <string name="nav_settings">সেটিংস</string>
+
+    <!-- Dashboard -->
+    <string name="dashboard_title">কল রেকর্ডিং কেন্দ্র</string>
+    <string name="dashboard_subtitle">সম্পূর্ণ গোপনীয়তা-কেন্দ্রিক অফলাইন কল ও ভয়েস লগার</string>
+    <string name="stat_total_recordings">মোট কল</string>
+    <string name="stat_today_recordings">আজকের কল</string>
+    <string name="stat_total_duration">মোট সময়কাল</string>
+    <string name="stat_storage_used">ব্যবহৃত স্টোরেজ</string>
+    <string name="status_standby">স্ট্যান্ডবাই (প্রস্তুত)</string>
+    <string name="status_recording_active">রেকর্ডিং চলছে</string>
+    <string name="status_telephony_listening">কল মনিটর সক্রিয়</string>
+    <string name="status_restricted_device">ওএস সামঞ্জস্য বিজ্ঞপ্তি</string>
+    <string name="status_restricted_desc">অ্যান্ড্রয়েড ১০+ সরাসরি উভয় পাশের সেলুলার অডিও ব্লক করে। মাইক্রোফোন ও ভয়েস কমিউনিকেশন সোর্স স্পিকারফোন অপ্টিমাইজেশনের সাথে প্রস্তুত।</string>
+    <string name="quick_record_call_memo">কল মেমো / ভয়েস নোট রেকর্ড করুন</string>
+    <string name="stop_recording">রেকর্ডিং বন্ধ করুন</string>
+    <string name="recent_recordings">সাম্প্রতিক রেকর্ডিং</string>
+    <string name="view_all">সবগুলো দেখুন</string>
+    <string name="empty_recent">এখনও কোন কল রেকর্ড করা হয়নি। কল আসলে বা গেলে স্বয়ংক্রিয়ভাবে এখানে সংরক্ষিত হবে।</string>
+
+    <!-- Library -->
+    <string name="library_title">রেকর্ডিং লাইব্রেরি</string>
+    <string name="search_hint">নাম, নম্বর বা নোট দিয়ে খুঁজুন…</string>
+    <string name="filter_all">সমস্ত</string>
+    <string name="filter_incoming">আগত কল</string>
+    <string name="filter_outgoing">বহির্গামী কল</string>
+    <string name="filter_imported">ইমপোর্টকৃত</string>
+    <string name="filter_notes">নোট ও মেমো</string>
+    <string name="filter_starred">পছন্দের</string>
+    <string name="sort_newest">নতুনগুলো আগে</string>
+    <string name="sort_oldest">পুরানোগুলো আগে</string>
+    <string name="sort_duration">দীর্ঘ সময় আগে</string>
+    <string name="unknown_contact">অজানা কলার</string>
+    <string name="action_play">প্লে করুন</string>
+    <string name="action_pause">বিরতি</string>
+    <string name="action_rename">নাম পরিবর্তন</string>
+    <string name="action_delete">মুছুন</string>
+    <string name="action_share">শেয়ার করুন</string>
+    <string name="action_export">ফাইল এক্সপোর্ট</string>
+    <string name="action_details">বিস্তারিত</string>
+    <string name="delete_confirm_title">রেকর্ডিং মুছবেন?</string>
+    <string name="delete_confirm_msg">এটি আপনার ডিভাইসের স্টোরেজ থেকে অডিও ফাইলটি স্থায়ীভাবে মুছে ফেলবে। এটি পুনরুদ্ধার করা সম্ভব নয়।</string>
+    <string name="delete_confirm_yes">মুছে ফেলুন</string>
+    <string name="delete_confirm_no">বাতিল</string>
+    <string name="rename_dialog_title">রেকর্ডিংয়ের নাম পরিবর্তন</string>
+    <string name="rename_dialog_hint">নতুন শিরোনাম লিখুন</string>
+    <string name="save">সংরক্ষণ করুন</string>
+    <string name="cancel">বাতিল</string>
+
+    <!-- Diagnostics -->
+    <string name="diag_title">ডিভাইস ও ওএস ডায়াগনস্টিকস</string>
+    <string name="diag_subtitle">অ্যান্ড্রয়েড রেকর্ডিং সক্ষমতার স্বচ্ছ বিশ্লেষণ</string>
+    <string name="diag_os_version">অ্যান্ড্রয়েড সংস্করণ</string>
+    <string name="diag_api_level">এপিআই লেভেল</string>
+    <string name="diag_device_model">ডিভাইস হার্ডওয়্যার</string>
+    <string name="diag_mic_permission">মাইক্রোফোন অনুমতি</string>
+    <string name="diag_phone_state_permission">ফোন স্টেট অনুমতি</string>
+    <string name="diag_contacts_permission">পরিচিতি (Contacts) অনুমতি</string>
+    <string name="diag_storage_permission">স্টোরেজ অনুমতি (স্কোপড)</string>
+    <string name="diag_notification_permission">বিজ্ঞপ্তি অনুমতি</string>
+    <string name="diag_granted">অনুমোদিত</string>
+    <string name="diag_denied">অনুমতি নেই</string>
+    <string name="diag_request_permissions">অনুমতির অনুরোধ করুন</string>
+    <string name="diag_policy_title">অ্যান্ড্রয়েড কল রেকর্ডিং নীতিমালা</string>
+    <string name="diag_policy_body">অ্যান্ড্রয়েড ৯ এবং ১০ সংস্করণ থেকে গুগল নন-সিস্টেম অ্যাপের জন্য সরাসরি সেলুলার কল অডিও ব্লক করেছে। এই অ্যাপটি অফিসিয়াল ভয়েস কমিউনিকেশন এবং মাইক্রোফোন এপিআই ব্যবহার করে। অ্যান্ড্রয়েড ১০+ ফোনে কলের সময় স্পিকারফোন চালু রাখলে উভয় পাশের কথা স্পষ্ট রেকর্ড হয়।</string>
+
+    <!-- Settings -->
+    <string name="settings_title">সেটিংস</string>
+    <string name="settings_auto_record_group">স্বয়ংক্রিয় রেকর্ডিং</string>
+    <string name="settings_enable_auto">স্বয়ংক্রিয় কল সনাক্তকরণ চালু করুন</string>
+    <string name="settings_enable_auto_desc">কল শুরু হলে স্বয়ংক্রিয় রেকর্ডিং সেবা শুরু হবে</string>
+    <string name="settings_record_incoming">আগত কল রেকর্ড করুন</string>
+    <string name="settings_record_outgoing">বহির্গামী কল রেকর্ড করুন</string>
+    <string name="settings_audio_source">অডিও রেকর্ডিং উৎস</string>
+    <string name="settings_audio_source_desc">ভয়েস কমিউনিকেশন (প্রস্তাবিত) / মাইক্রোফোন</string>
+    <string name="settings_audio_format">অডিও ফরম্যাট</string>
+    <string name="settings_storage_location">স্টোরেজ লোকেশন</string>
+    <string name="settings_storage_location_path">Recordings/AutoCallRecorder (অভ্যন্তরীণ স্টোরেজ)</string>
+    <string name="settings_security_group">নিরাপত্তা ও গোপনীয়তা</string>
+    <string name="settings_pin_lock">অ্যাপ পিন লক</string>
+    <string name="settings_pin_lock_desc">অ্যাপ খুলতে ৪ সংখ্যার পিন প্রয়োজন হবে</string>
+    <string name="settings_set_pin">পিন সেট করুন</string>
+    <string name="settings_change_pin">পিন পরিবর্তন করুন</string>
+    <string name="settings_language_group">ভাষা / Language</string>
+    <string name="settings_select_language">ইন্টারফেস ভাষা নির্বাচন করুন</string>
+    <string name="settings_backup_group">ব্যাকআপ ও ওয়েব সিঙ্ক</string>
+    <string name="settings_export_json">রেকর্ডিং মেটাডাটা এক্সপোর্ট (JSON)</string>
+    <string name="settings_import_audio">অডিও ফাইল ইমপোর্ট করুন</string>
+    <string name="settings_about_group">তথ্য ও গোপনীয়তা</string>
+    <string name="settings_privacy_policy">গোপনীয়তা নীতি (১০০% লোকাল, ক্লাউডে কোনো ফাইল আপলোড হয় না)</string>
+    <string name="settings_version">অ্যাপ সংস্করণ ১.০.০ (রিলিজ বিল্ড)</string>
+
+    <!-- PIN Lock -->
+    <string name="pin_title">নিরাপত্তা পিন দিন</string>
+    <string name="pin_subtitle">আপনার সংরক্ষিত কল রেকর্ডিং দেখতে ৪ সংখ্যার পিন কোড লিখুন</string>
+    <string name="pin_setup_title">নতুন পিন সেট করুন</string>
+    <string name="pin_error">ভুল পিন। অনুগ্রহ করে আবার চেষ্টা করুন।</string>
+
+    <!-- Web App & Sync -->
+    <string name="web_title">ওয়েব অ্যাপ ও অফলাইন সিঙ্ক</string>
+    <string name="web_desc">HTML5/JS ওয়েব অ্যাপ ও ব্রাউজার প্লেব্যাকের জন্য IndexedDB স্টোরেজ এবং GitHub Pages প্রস্তুত।</string>
+    <string name="open_web_interface">ওয়েব ইন্টারফেস খুলুন</string>
+</resources>

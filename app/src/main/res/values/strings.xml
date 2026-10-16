@@ -1,0 +1,109 @@
+<resources>
+    <string name="app_name">Auto Call Recorder</string>
+    <string name="nav_dashboard">Dashboard</string>
+    <string name="nav_recordings">Recordings</string>
+    <string name="nav_diagnostics">Diagnostics</string>
+    <string name="nav_web_sync">Web &amp; Export</string>
+    <string name="nav_settings">Settings</string>
+
+    <!-- Dashboard -->
+    <string name="dashboard_title">Call Recording Center</string>
+    <string name="dashboard_subtitle">Privacy-first offline call &amp; voice logger</string>
+    <string name="stat_total_recordings">Total Calls</string>
+    <string name="stat_today_recordings">Today</string>
+    <string name="stat_total_duration">Total Duration</string>
+    <string name="stat_storage_used">Storage Used</string>
+    <string name="status_standby">Standby (Ready)</string>
+    <string name="status_recording_active">Recording Active</string>
+    <string name="status_telephony_listening">Call Monitor Active</string>
+    <string name="status_restricted_device">OS Compatibility Notice</string>
+    <string name="status_restricted_desc">Android 10+ restricts raw 2-way cellular audio streams. Microphone and Voice Communication sources are active with speakerphone optimization.</string>
+    <string name="quick_record_call_memo">Record Call Memo / Voice Note</string>
+    <string name="stop_recording">Stop Recording</string>
+    <string name="recent_recordings">Recent Recordings</string>
+    <string name="view_all">View All</string>
+    <string name="empty_recent">No calls recorded yet. Incoming and outgoing calls will appear here automatically when enabled.</string>
+
+    <!-- Library -->
+    <string name="library_title">Recording Library</string>
+    <string name="search_hint">Search by name, number, or tag…</string>
+    <string name="filter_all">All</string>
+    <string name="filter_incoming">Incoming</string>
+    <string name="filter_outgoing">Outgoing</string>
+    <string name="filter_imported">Imported</string>
+    <string name="filter_notes">Memos</string>
+    <string name="filter_starred">Starred</string>
+    <string name="sort_newest">Newest First</string>
+    <string name="sort_oldest">Oldest First</string>
+    <string name="sort_duration">Longest First</string>
+    <string name="unknown_contact">Unknown Contact</string>
+    <string name="action_play">Play</string>
+    <string name="action_pause">Pause</string>
+    <string name="action_rename">Rename</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_share">Share</string>
+    <string name="action_export">Export File</string>
+    <string name="action_details">Details</string>
+    <string name="delete_confirm_title">Delete Recording?</string>
+    <string name="delete_confirm_msg">This will permanently delete this audio file from your device storage. This action cannot be undone.</string>
+    <string name="delete_confirm_yes">Delete</string>
+    <string name="delete_confirm_no">Cancel</string>
+    <string name="rename_dialog_title">Rename Recording</string>
+    <string name="rename_dialog_hint">Enter new title or contact note</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+
+    <!-- Diagnostics -->
+    <string name="diag_title">Device &amp; OS Diagnostics</string>
+    <string name="diag_subtitle">Transparent check of Android recording capabilities</string>
+    <string name="diag_os_version">Android Version</string>
+    <string name="diag_api_level">API Level</string>
+    <string name="diag_device_model">Device Hardware</string>
+    <string name="diag_mic_permission">Microphone Permission</string>
+    <string name="diag_phone_state_permission">Phone State Permission</string>
+    <string name="diag_contacts_permission">Contacts Permission</string>
+    <string name="diag_storage_permission">Storage Permission (Scoped)</string>
+    <string name="diag_notification_permission">Notification Permission</string>
+    <string name="diag_granted">Granted</string>
+    <string name="diag_denied">Not Granted</string>
+    <string name="diag_request_permissions">Request Missing Permissions</string>
+    <string name="diag_policy_title">Android Call Recording Policy</string>
+    <string name="diag_policy_body">Since Android 9 (Pie) and Android 10, Google restricted third-party apps from directly tapping into raw cellular voice calls (VOICE_CALL audio source). This app uses legitimate Android APIs: AudioSource.VOICE_COMMUNICATION and AudioSource.MIC with hardware acoustic echo cancellation and automatic phone state detection. For best 2-way quality on Android 10+, turning on Speakerphone during calls allows capturing both sides cleanly.</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_auto_record_group">Automatic Recording</string>
+    <string name="settings_enable_auto">Enable Auto Call Detection</string>
+    <string name="settings_enable_auto_desc">Automatically trigger recording service when cellular call starts</string>
+    <string name="settings_record_incoming">Record Incoming Calls</string>
+    <string name="settings_record_outgoing">Record Outgoing Calls</string>
+    <string name="settings_audio_source">Audio Recording Source</string>
+    <string name="settings_audio_source_desc">Voice Communication (recommended) / Microphone</string>
+    <string name="settings_audio_format">Audio Format</string>
+    <string name="settings_storage_location">Storage Destination</string>
+    <string name="settings_storage_location_path">Recordings/AutoCallRecorder (Internal Storage)</string>
+    <string name="settings_security_group">Security &amp; Privacy</string>
+    <string name="settings_pin_lock">App PIN Lock</string>
+    <string name="settings_pin_lock_desc">Require 4-digit PIN to open application</string>
+    <string name="settings_set_pin">Set 4-Digit PIN</string>
+    <string name="settings_change_pin">Change PIN</string>
+    <string name="settings_language_group">Language / ভাষা</string>
+    <string name="settings_select_language">Select Interface Language</string>
+    <string name="settings_backup_group">Backup &amp; Web Bridge</string>
+    <string name="settings_export_json">Export Recordings Metadata (JSON)</string>
+    <string name="settings_import_audio">Import Audio Recording</string>
+    <string name="settings_about_group">About &amp; Privacy</string>
+    <string name="settings_privacy_policy">Privacy Policy (100% Local, Zero Cloud Upload)</string>
+    <string name="settings_version">App Version 1.0.0 (Release Build)</string>
+
+    <!-- PIN Lock -->
+    <string name="pin_title">Enter Security PIN</string>
+    <string name="pin_subtitle">Enter your 4-digit security code to access call recordings</string>
+    <string name="pin_setup_title">Set New PIN</string>
+    <string name="pin_error">Incorrect PIN. Please try again.</string>
+
+    <!-- Web App & Sync -->
+    <string name="web_title">Web App &amp; Offline Sync</string>
+    <string name="web_desc">Responsive HTML5/JS Web App with IndexedDB for browser playback &amp; GitHub Pages deployment.</string>
+    <string name="open_web_interface">Open Embedded Web App</string>
+</resources>

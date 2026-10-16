@@ -1,0 +1,6 @@
+{
+  "name": "Auto Call Recorder",
+  "description": "Professional auto call recorder with offline library, audio player, Android device diagnostics, and GitHub Pages web app.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
